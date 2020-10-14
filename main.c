@@ -121,8 +121,8 @@ int main(int argc, const char *argv[])
     start = clock();
     double ret = bissec(p, lParam, 1, 2, pow(10, -14));
     end = clock();
-    cpu_time = ((double) (end - start)) / CLOCKS_PER_SEC;
+    cpu_time = ((double) (end - start)) / (double)CLOCKS_PER_SEC;
     printf("Result = %.15f\n", ret);
-    printf("Time %.10f\n", cpu_time);
+    printf("Time %.9f\n", cpu_time);
     return 0;
 }
