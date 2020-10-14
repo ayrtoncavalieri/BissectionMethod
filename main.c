@@ -60,7 +60,7 @@ bool isNeg(double(*func)(double *params), double *lParam, double p1, double p2)
 /*
     *func - Function that will be used for calculations
     *lParam - List of Parameters, the first index, [0], is the "x"
-of the function, the other indexes are constants.
+of the function, the other indexes are constants of the parameter function, if any.
     a - lower interval bound
     b - higher interval bound
     epsilon - Error of the result
