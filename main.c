@@ -1,5 +1,5 @@
 /*
-    Ayrton Cavalieri de Almeida, bissection method implementation
+    Ayrton Cavalieri de Almeida, bisection method implementation
     Copyright (C) 2020  Ayrton Cavalieri de Almeida
 
     This program is free software: you can redistribute it and/or modify
