@@ -123,6 +123,6 @@ int main(int argc, const char *argv[])
     end = clock();
     cpu_time = ((double) (end - start)) / (double)CLOCKS_PER_SEC;
     printf("Result = %.15f\n", ret);
-    printf("Time %.9f\n", cpu_time);
+    printf("Time %.9f seconds\n", cpu_time);
     return 0;
 }
