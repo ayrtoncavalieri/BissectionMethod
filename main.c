@@ -21,6 +21,7 @@
 #include <stdbool.h>
 #include <alloca.h>
 #include <math.h>
+#include <time.h>
 
 #define MAXITERATIONS 10000
 
@@ -115,7 +116,13 @@ int main(int argc, const char *argv[])
     //lParam[1] = 10;
     //double ret = bissec(f, lParam, 0, 10, pow(10, -10));
     double *lParam = (double*)alloca(sizeof(double));
+    clock_t start, end;
+    double cpu_time;
+    start = clock();
     double ret = bissec(p, lParam, 1, 2, pow(10, -14));
+    end = clock();
+    cpu_time = ((double) (end - start)) / CLOCKS_PER_SEC;
     printf("Result = %.15f\n", ret);
+    printf("Time %.10f\n", cpu_time);
     return 0;
 }
