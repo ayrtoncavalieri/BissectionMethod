@@ -39,6 +39,7 @@ double errX(double x, double xBef) //x -> x(n), xBef = x(n - 1)
     return _abs(x - xBef);
 }
 
+//Function f allows you to find the square root of a number passed as argument in params[1]
 double f(double *params)
 {
     return pow(params[0], 2) - params[1];
