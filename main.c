@@ -35,7 +35,7 @@ double errR(double(*func)(double *params), double *lParam)
     return _abs(func(lParam));
 }
 
-double errX(double x, double xBef) //x -> x(n), xBef = x(n - 1)
+double errX(double x, double xBef) //x -> x(n), xBef -> x(n - 1)
 {
     return _abs(x - xBef);
 }
