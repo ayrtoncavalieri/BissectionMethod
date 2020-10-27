@@ -78,7 +78,7 @@ double bissec(double(*func)(double *params), double *lParam, double a, double b,
     lParam[0] = x;
 #ifdef DEBUG
     _errR = errR(func, lParam);
-    printf("%.15f\t%.15f\t%.15f\n", x, NAN, _errR);
+    printf("%.8f\t%.8f\t%.8f\n", x, NAN, _errR);
 #endif
     if(func(lParam) == 0.0){
         return x;
@@ -95,7 +95,7 @@ double bissec(double(*func)(double *params), double *lParam, double a, double b,
         _errX = errX(x, xOld);
         _errR = errR(func, lParam);
 #ifdef DEBUG
-        printf("%.15f\t%.15f\t%.15f\n", x, _errX, _errR);
+        printf("%.9f\t%.9f\t%.9f\n", x, _errX, _errR);
 #endif
         if(_errX <= epsilon && _errR <= epsilon){
             break;
@@ -119,10 +119,10 @@ int main(int argc, const char *argv[])
     clock_t start, end;
     double cpu_time;
     start = clock();
-    double ret = bissec(p, lParam, 1, 2, pow(10, -14));
+    double ret = bissec(p, lParam, 1, 2, pow(10, -8));
     end = clock();
     cpu_time = ((double) (end - start)) / (double)CLOCKS_PER_SEC;
-    printf("Result = %.15f\n", ret);
+    printf("Result = %.9f\n", ret);
     printf("Time %.9f seconds\n", cpu_time);
     return 0;
 }
